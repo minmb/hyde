@@ -1,0 +1,15 @@
+---
+title: Great success!
+---
+
+{% capture copy_success %}
+  {% include copy/success.markdown %}
+{% endcapture %}
+{{ copy_success | unindent | markdownify }}
+
+<h2>{% t sample_posts %}</h2>
+<ul>
+{% for post in site.posts %}
+   <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

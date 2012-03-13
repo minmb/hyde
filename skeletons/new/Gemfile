@@ -1,0 +1,8 @@
+source :rubygems
+
+gem 'jekyll', :git => 'git://github.com/minmb/jekyll.git'
+
+group :development do
+  gem 'yajl-ruby'
+  gem 'guard-livereload'
+end
